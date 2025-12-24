@@ -125,24 +125,23 @@ function showImg(direction) {
         galleryImg.classList.add('prev');
     }
     setTimeout(() => {
-        galleryImg.src = `images/picture/${n}.jpg`;
+        galleryImg.src = `images/picture/${galleryIndex}.jpg`;
         galleryImg.classList.remove('next', 'prev');
     }, 500);
 }
 
 galleryBtn.onclick = () => {
     password.blur();
-    menuPage.style.display = "none";
-    galleryPage.style.display = "flex";
+    showPage(galleryPage);
     playMusic("music/3.mp3");
-    showImg();
+    galleryImg.src = `images/picture/${galleryIndex}.jpg`;
 };
 
 backFromGallery.onclick = () => {
-    galleryPage.style.display = "none";
-    menuPage.style.display = "flex";
+    showPage(menuPage);
     playMusic("music/1.mp3");
 };
+
 
 nextBtn.onclick = () => {
     if (galleryIndex < galleryTotal) {
@@ -462,7 +461,6 @@ function updateBowlVisual(item) {
             break;
         case 'egg':
             const eggLevel = document.querySelector('.egg-level');
-            sugarLevel.style.height = Math.min(ingredientCounts.sugar * 15, 80) + '%';
             eggLevel.style.display = 'block';
             // Position eggs
             if (ingredientCounts.egg === 1) {
@@ -1109,11 +1107,12 @@ document.addEventListener("mousemove", e => {
 });
 
 /* ===== INITIALIZATION ===== */
-document.addEventListener('DOMContentLoaded', function() {
-    // Initialize cooking game if on cooking page
-    if (document.getElementById('cookingPage')) {
-        resetCookingGame();
-    }
-});
+cookingBtn.onclick = () => {
+    password.blur();
+    showPage(cookingPage);
+    playMusic("music/2.mp3");
+    resetCookingGame();
+};
+
 
 
