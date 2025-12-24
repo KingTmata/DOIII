@@ -116,7 +116,7 @@ const nextBtn = document.getElementById("nextBtn");
 const prevBtn = document.getElementById("prevBtn");
 
 let galleryIndex = 1;
-const galleryTotal = 30;
+const galleryTotal = 36;
 
 function showImg(direction) {
     if (direction === 'next') {
@@ -1113,6 +1113,7 @@ document.addEventListener('DOMContentLoaded', function() {
         resetCookingGame();
     }
 });
+
 
 
 
