@@ -125,7 +125,7 @@ function showImg(direction) {
         galleryImg.classList.add('prev');
     }
     setTimeout(() => {
-        galleryImg.src = `images/${galleryIndex}.jpg`;
+        galleryImg.src = `images/picture/${galleryIndex}.jpg`;
         galleryImg.classList.remove('next', 'prev');
     }, 500);
 }
@@ -1115,3 +1115,4 @@ document.addEventListener('DOMContentLoaded', function() {
         resetCookingGame();
     }
 });
+
