@@ -132,14 +132,14 @@ function showImg(direction) {
 
 galleryBtn.onclick = () => {
     password.blur();
-    showPage(galleryPage);
-    playMusic("music/3.mp3");
+    menuPage.style.display = "none";
+    galleryPage.style.display = "flex";
     galleryImg.src = `images/picture/${galleryIndex}.jpg`;
 };
 
 backFromGallery.onclick = () => {
-    showPage(menuPage);
-    playMusic("music/1.mp3");
+    galleryPage.style.display = "none";
+    menuPage.style.display = "flex";
 };
 
 
@@ -1113,6 +1113,7 @@ document.addEventListener('DOMContentLoaded', function() {
         resetCookingGame();
     }
 });
+
 
 
 
