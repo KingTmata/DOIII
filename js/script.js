@@ -70,7 +70,7 @@ function startGame() {
         const back = document.createElement("div");
         back.className = "card-back";
         const img = document.createElement("img");
-        img.src = `/static/images/game/${n}.jpg`;
+        img.src = `images/game/${n}.jpg`;
         back.appendChild(img);
 
         card.appendChild(front);
@@ -125,7 +125,7 @@ function showImg(direction) {
         galleryImg.classList.add('prev');
     }
     setTimeout(() => {
-        galleryImg.src = `static/images/picture/${galleryIndex}.jpg`;
+        galleryImg.src = `images/${galleryIndex}.jpg`;
         galleryImg.classList.remove('next', 'prev');
     }, 500);
 }
