@@ -7,89 +7,223 @@
 </head>
 
 <body>
-    <!-- AUDIO -->
-    <audio id="bgm" loop></audio>
 
-    <!-- LOGIN -->
-    <div id="loginPage">
-        <div class="loginBox">
-            <input type="password" id="password" placeholder="Doi Đoán Pass i">
-            <button id="confirmBtn" style="border:5px solid #ffe9e9;border-radius:50px;padding:8px 10px;background:#ffe9e9;color:#464646;">
-                chắc chưa😋
-            </button>
-        </div>
+<!-- AUDIO -->
+<audio id="bgm" loop></audio>
+
+<!-- LOGIN -->
+<div id="loginPage">
+    <div class="loginBox">
+        <input type="password" id="password" placeholder="Doi Đoán Pass i">
+        <button id="confirmBtn" style="border:5px solid #ffe9e9;border-radius:50px;padding:8px 10px;background:#ffe9e9;color:#464646;">
+            chắc chưa😋
+        </button>
     </div>
+</div>
 
-    <!-- MENU -->
-    <div id="menuPage">
-        <h1>choi gem hay ảnh i</h1>
-        <div id="buttons">
-            <button id="gameBtn">👽🎀</button>
-            <button id="cookingBtn">🎂🎀</button>
-            <button id="galleryBtn">🧋🎀</button>
-        </div>
+<!-- MENU -->
+<div id="menuPage">
+    <h1>choi gem hay ảnh i</h1>
+    <div id="buttons">
+        <button id="gameBtn">👽🎀</button>
+        <button id="cookingBtn">🎂🎀</button>
+        <button id="galleryBtn">🧋🎀</button>
     </div>
+</div>
 
-    <!-- GAME -->
-    <div id="gamePage">
-        <h2>har har</h2>
-        <div id="gameGrid"></div>
-        <button id="backFromGame">⬅ Trở về</button>
-    </div>
+<!-- GAME -->
+<div id="gamePage">
+    <h2>har har</h2>
+    <div id="gameGrid"></div>
+    <button id="backFromGame">⬅ Trở về</button>
+</div>
 
-    <!-- COOKING GAME -->
-    <div id="cookingPage">
-        <button id="backFromCooking">⬅ Trở về</button>
+<!-- COOKING GAME -->
+<div id="cookingPage">
+    <button id="backFromCooking">⬅ Trở về</button>
 
-        <div id="cookingContainer">
-            <h2 id="cookingTitle">🎂 Bánh i 🎂</h2>
+    <div id="cookingContainer">
+        <h2 id="cookingTitle">🎂 Bánh i 🎂</h2>
 
-            <!-- Bước 1: Trộn bột -->
-            <div class="cooking-step" id="step1">
-                <h3></h3>
+        <!-- Bước 1: Trộn bột -->
+        <div class="cooking-step" id="step1">
+            <h3></h3>
 
-                <div class="step1-content">
-                    <!-- Cột trái: Bột và sữa -->
-                    <div class="ingredients-column">
-                        <div class="ingredient" data-item="flour" draggable="true">
-                            <span class="emoji">🌾</span>
-                            <span class="name">Bột mì</span>
-                            <span class="count">(<span class="count-num">0</span>)</span>
-                        </div>
-                        <div class="ingredient" data-item="milk" draggable="true">
-                            <span class="emoji">🥛</span>
-                            <span class="name">Sữa</span>
-                            <span class="count">(<span class="count-num">0</span>)</span>
-                        </div>
+            <div class="step1-content">
+                <!-- Cột trái: Bột và sữa -->
+                <div class="ingredients-column">
+                    <div class="ingredient" data-item="flour" draggable="true">
+                        <span class="emoji">🌾</span>
+                        <span class="name">Bột mì</span>
+                        <span class="count">(<span class="count-num">0</span>)</span>
                     </div>
+                    <div class="ingredient" data-item="milk" draggable="true">
+                        <span class="emoji">🥛</span>
+                        <span class="name">Sữa</span>
+                        <span class="count">(<span class="count-num">0</span>)</span>
+                    </div>
+                </div>
 
-                    <!-- Ở giữa: Cái tô -->
-                    <div class="bowl-container">
-                        <div class="bowl" id="bowl">
-                            <div class="ingredient-level flour-level"></div>
-                            <div class="ingredient-level sugar-level"></div>
-                            <div class="ingredient-level egg-level"></div>
-                            <div class="ingredient-level milk-level"></div>
-                            <div class="ingredient-level mixed-dough"></div>
-                        </div>
-                        <div id="doughStatus" class="status-message"></div>
-                        <div class="action-buttons">
-                            <button id="resetIngredients" style="display:none">🔄 Làm lại</button>
-                            <button id="mixBtn" style="display:none">🔄 Trộn bột</button>
-                        </div>
-                    </div> <!-- Đóng thẻ div.bowl-container -->
-                </div> <!-- Đóng thẻ div.step1-content -->
-            </div> <!-- Đóng thẻ div.cooking-step -->
-        </div> <!-- Đóng thẻ div#cookingContainer -->
-    </div> <!-- Đóng thẻ div#cookingPage -->
+                <!-- Ở giữa: Cái tô -->
+                <div class="bowl-container">
+                    <div class="bowl" id="bowl">
+                        <div class="ingredient-level flour-level"></div>
+                        <div class="ingredient-level sugar-level"></div>
+                        <div class="ingredient-level egg-level"></div>
+                        <div class="ingredient-level milk-level"></div>
+                        <div class="ingredient-level mixed-dough"></div>
+                    </div>
+                    <div id="doughStatus" class="status-message"></div>
+                    <div class="action-buttons">
+                        <button id="resetIngredients" style="display:none">🔄 Làm lại</button>
+                        <button id="mixBtn" style="display:none">🔄 Trộn bột</button>
+                    </div>
+                </div>
 
-    <!-- GALLERY PAGE (Cần bổ sung nội dung) -->
-    <div id="galleryPage" style="display:none;">
-        <button id="backFromGallery">⬅ Trở về</button>
-        <h2>🧋 Thư viện ảnh</h2>
-        <!-- Bạn có thể thêm nội dung hiển thị ảnh vào đây -->
+                <!-- Cột phải: Đường và trứng -->
+                <div class="ingredients-column">
+                    <div class="ingredient" data-item="sugar" draggable="true">
+                        <span class="emoji">🍚</span>
+                        <span class="name">Đường</span>
+                        <span class="count">(<span class="count-num">0</span>)</span>
+                    </div>
+                    <div class="ingredient" data-item="egg" draggable="true">
+                        <span class="emoji">🥚</span>
+                        <span class="name">Trứng</span>
+                        <span class="count">(<span class="count-num">0</span>)</span>
+                    </div>
+                </div>
+            </div>
+            <button class="next-step" id="nextStep1">Tiếp theo ➡️</button>
+        </div>
+
+        <!-- Bước 2: Nướng bánh -->
+        <div class="cooking-step" id="step2" style="display:none">
+            <h3></h3>
+
+            <div class="step2-content">
+                <!-- Bên trái: Bánh -->
+                <div class="oven-container">
+                    <div class="cake" id="cake"></div>
+                    <div id="baking-progress"></div>
+                    <div id="bakeStatus" class="status-message"></div>
+                </div>
+
+                <!-- Bên phải: Điều khiển -->
+                <div class="controls-column">
+                    <div class="baking-controls">
+                        <div class="control-group">
+                            <label>🌡️ Nhiệt độ lò</label>
+                            <input type="range" id="tempSlider" min="0" max="250" value="0" step="5">
+                            <div class="temp-display">Nhiệt độ: <span id="tempValue">0</span>°C</div>
+                        </div>
+
+                        <div class="control-group">
+                            <label>⏱️ Thời gian nướng</label>
+                            <input type="range" id="timeSlider" min="0" max="60" value="0" step="5">
+                            <div class="time-display">Thời gian: <span id="timeValue">0</span> phút</div>
+                        </div>
+
+                        <button id="startBaking" style="display:block">🔥 Bắt đầu nướng</button>
+                        <button id="rebakeBtn" style="display:none">🔄 Nướng lại</button>
+                    </div>
+                </div>
+            </div>
+            <button class="next-step" id="nextStep2">Tiếp theo ➡️</button>
+        </div>
+
+        <!-- Bước 3: Phết kem -->
+        <div class="cooking-step" id="step3" style="display:none">
+            <h3></h3>
+
+            <div class="step3-content">
+                <div class="cream-cake" id="creamCake">
+                    <div class="cream-layer"></div>
+                </div>
+
+                <div class="cream-selector">
+                    <h4>Chọn màu cho bánh i:</h4>
+                    <div class="cream-colors">
+                        <div class="cream-color active" data-color="#ffe4e1" style="background:#ffdcd8">🌸</div>
+                        <div class="cream-color" data-color="#fff5ee" style="background:#ffffff">🤍</div>
+                        <div class="cream-color" data-color="#ffb6c1" style="background:#ff9caa">💗</div>
+                        <div class="cream-color" data-color="#ffd1dc" style="background:#ebff9c">🍏</div>
+                        <div class="cream-color" data-color="#e6e6fa" style="background:#ffbb3b">💛</div>
+                        <div class="cream-color" data-color="#ffebcd" style="background:#000000">🖤</div>
+                    </div>
+                </div>
+
+                <button class="next-step" id="nextStep3">Tiếp theo ➡️</button>
+            </div>
+        </div>
+
+        <!-- Bước 4: Trang trí -->
+        <div class="cooking-step" id="step4" style="display:none">
+            <h3></h3>
+
+            <div class="step4-content">
+                <div class="decorated-cake" id="decoratedCake">
+                    <div class="cream-layer"></div>
+                </div>
+
+                <div class="decorations-container">
+                    <h4>Chọn đồ trang trí:</h4>
+                    <div class="decorations-grid">
+                        <div class="decoration-item" data-deco="🍓">🍓</div>
+                        <div class="decoration-item" data-deco="🍒">🍒</div>
+                        <div class="decoration-item" data-deco="🫐">🫐</div>
+                        <div class="decoration-item" data-deco="🌸">🌸</div>
+                        <div class="decoration-item" data-deco="🎀">🎀</div>
+                        <div class="decoration-item" data-deco="⭐">⭐</div>
+                        <div class="decoration-item" data-deco="💎">💎</div>
+                        <div class="decoration-item" data-deco="🦄">🦄</div>
+                        <div class="decoration-item" data-deco="🧸">🧸</div>
+                        <div class="decoration-item" data-deco="🍭">🍭</div>
+                    </div>
+                    <p style="color: #ff1493; font-size: 16px; text-align: center; margin-top: 10px;">
+                        👆 Chọn đồ trang trí rồi nhấn lên bánh để trang trí
+                    </p>
+                </div>
+
+                <button id="finishCooking">🎉 Hoàn thành</button>
+            </div>
+        </div>
+
+        <!-- Kết quả -->
+        <div id="result" class="cooking-step" style="display:none">
+            <h2>xong oi giỏi qa</h2>
+
+            <div class="result-cake" id="resultCake">
+                <div class="cream-layer"></div>
+            </div>
+
+            <div id="resultMessage"></div>
+
+            <button id="saveCakePNG" class="next-step">
+                💾 Lưu bánh vào Gallery
+            </button>
+
+            <div id="cakeGallery" class="cake-gallery"></div>
+
+            <button id="restartCooking" class="next-step">🔄 Làm bánh mới</button>
+        </div>
     </div>
+</div>
 
-    <script src="js/script.js"></script>
+<!-- GALLERY -->
+<div id="galleryPage">
+    <button id="backFromGallery">⬅ Trở về</button>
+    <div class="gallery-container">
+        <img id="galleryImg" class="gallery-image">
+    </div>
+    <div class="galleryBtns">
+        <button id="prevBtn">⬅</button>
+        <button id="nextBtn">➡</button>
+    </div>
+</div>
+
+<!-- LINK TO JAVASCRIPT FILE -->
+<script src="js/script.js"></script>
+
 </body>
 </html>
