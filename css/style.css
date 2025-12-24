@@ -27,7 +27,7 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url("images/background.png") center/cover no-repeat;
+    background: url("../images/background.png") center/cover no-repeat;
 }
 
 .loginBox {
@@ -51,7 +51,7 @@ button:hover {
     display: none;
     width: 100vw;
     height: 100vh;
-    background: url("images/2b.jpg") center/cover no-repeat;
+    background: url("../images/2b.jpg") center/cover no-repeat;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -1077,5 +1077,6 @@ button:hover {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
 
 
