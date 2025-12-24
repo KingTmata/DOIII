@@ -461,6 +461,7 @@ function updateBowlVisual(item) {
             break;
         case 'egg':
             const eggLevel = document.querySelector('.egg-level');
+            sugarLevel.style.height = Math.min(ingredientCounts.sugar * 15, 80) + '%';
             eggLevel.style.display = 'block';
             // Position eggs
             if (ingredientCounts.egg === 1) {
@@ -1107,12 +1108,12 @@ document.addEventListener("mousemove", e => {
 });
 
 /* ===== INITIALIZATION ===== */
-cookingBtn.onclick = () => {
-    password.blur();
-    showPage(cookingPage);
-    playMusic("music/2.mp3");
-    resetCookingGame();
-};
+document.addEventListener('DOMContentLoaded', function() {
+    if (document.getElementById('cookingPage')) {
+        resetCookingGame();
+    }
+});
+
 
 
 
